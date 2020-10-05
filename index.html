@@ -51,7 +51,7 @@
      
      
      
-     <script>
+     <script type ="text/javascript">
          const AssistantV1 = require('ibm-watson/assistant/v1');
       const { IamAuthenticator } = require('ibm-watson/auth');
 
@@ -60,7 +60,7 @@ const assistant = new AssistantV1({
   authenticator: new IamAuthenticator({
     apikey: 'oljrx2yYgXjDsR5c_P657fKN0cTOandsdc92YJPeiip9',
   }),
-  serviceUrl: 'https://api.us-south.assistant.watson.cloud.ibm.com/',
+  serviceUrl: 'https://api.us-south.assistant.watson.cloud.ibm.com/v1/workspaces/',
 });
 
 const params = {
@@ -72,7 +72,8 @@ assistant.listLogs(params)
     console.log(JSON.stringify(res.result, null, 2));
   })
   .catch(err => {
-    console.log(err)
+    console.log("my custom error message");
+    console.log(err);
   });
      </script>
      
