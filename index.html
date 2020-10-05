@@ -40,8 +40,20 @@
       onLoad: function(instance) { instance.render(); }
     };
   
-  const AssistantV1 = require('ibm-watson/assistant/v1');
-  const { IamAuthenticator } = require('ibm-watson/auth');
+  
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+     
+     
+     
+     
+     <script type="text/javascript">
+       const AssistantV1 = require('ibm-watson/assistant/v1');
+      const { IamAuthenticator } = require('ibm-watson/auth');
 
 const assistant = new AssistantV1({
   version: '2020-04-01',
@@ -52,7 +64,7 @@ const assistant = new AssistantV1({
 });
 
 const params = {
-  workspaceId: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/4d40648f-5360-4aef-aac2-b83c580559f3/v1/workspaces/47713873-f896-4f9b-9ac7-3f866007932c/message'
+  workspaceId: '47713873-f896-4f9b-9ac7-3f866007932c'
 };
 
 assistant.listLogs(params)
@@ -62,14 +74,8 @@ assistant.listLogs(params)
   .catch(err => {
     console.log(err)
   });
- 
-  
-  
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-    document.head.appendChild(t);
-  });
-</script>
+     
+     
+     
   </body>
 <html>
