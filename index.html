@@ -46,13 +46,10 @@
     t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
     document.head.appendChild(t);
   });
-</script>
-     
-     
-     
-     
-     <script type="text/javascript">
-       const AssistantV1 = require('ibm-watson/assistant/v1');
+  
+  
+  
+  const AssistantV1 = require('ibm-watson/assistant/v1');
       const { IamAuthenticator } = require('ibm-watson/auth');
 
 const assistant = new AssistantV1({
@@ -74,8 +71,11 @@ assistant.listLogs(params)
   .catch(err => {
     console.log(err)
   });
-     </script>
+</script>
      
+     
+     
+   
      
   </body>
 <html>
