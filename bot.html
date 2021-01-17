@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MipsBot
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+
+<h3 align="center">Chat Demo</h3>
+
+
+
+
+<style type="text/css">
+    .chatElement {
+        height: 600px;
+        width: 900px;
+        margin: auto;
+    }
+
+
+</style>
+
+
+<div class="chatElement">
+
+</div>
+
+<div id="logs" class="logs">
+test
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+
+    const element = document.querySelector('.chatElement');
+
+    window.watsonAssistantChatOptions = {
+        integrationID: "e2bb0903-8325-415f-a6dc-817f90b602ca", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "4d40648f-5360-4aef-aac2-b83c580559f3", // The ID of your service instance.
+      
+  //       carbonTheme: 'g90',
+      
+  //       instance.updateCSSVariables({
+  //         'BASE-font-family': '"Times New Roman", Times, serif',
+  //         '$active-primary': '#009900',
+  //         '$focus': '#008000',
+  //         '$hover-primary': '#00ff00',
+  //         '$interactive-01': '#008000'
+  //       });
+      
+        showLauncher: false,
+        openChatByDefault: true,
+        hideCloseButton: true,
+        element: element,
+
+        debug: true,
+
+        onLoad: function(instance) {
+
+            instance.writeableElements.headerBottomElement.innerHTML = '<div lass="inChat" style="background-color:aquamarine;text-align:center">Beta Testing</div>';
+
+            function sendhandler(obj) {
+                //console.log(obj.type, obj.data.input);
+                document.getElementById("logs").innerHTML = "<strong>Sent: </strong>" + obj.data.input.text;    // print the question typed on "send"
+                }
+                instance.on({ type: "send", handler: sendhandler });
+
+            function recievehandler(event) {
+                document.getElementById("logs").innerHTML = "<strong>Recieved: </strong>" + event.data.output.generic[0].text;
+            }
+                instance.on({ type: "receive", handler: recievehandler });
+
+            instance.render();
+            }
+      };
+    
+    
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+    </body>
+</html>
