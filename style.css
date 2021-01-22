@@ -3,9 +3,110 @@ html, body {
     min-height: 100%;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    /*box-sizing: border-box; !* include padding/border in total width/height calculations *!*/
 }
 
 body {
-    background: rgb(130,176,223);
-    background: linear-gradient(0deg, rgba(130,176,223,1) 25%, rgba(213,234,255,1) 59%, rgba(255,255,255,1) 100%);
+    background: rgb(73,136,223);
+    background: linear-gradient(0deg, rgba(73,136,223,1) 23%, rgba(125,190,241,1) 32%);
+    background-attachment: fixed;
+}
+
+::selection {
+    background-color: #15c198;
+}
+
+a:link {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+a:visited {
+
+}
+
+a:hover {
+    color: #15c198;
+    /*transition-delay: 1s;*/
+}
+
+a:active {
+
+}
+
+header {
+    height: 10%;
+    background: white;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    animation-duration: 5s;
+    animation-name: fadeIn;
+    overflow: hidden;
+}
+
+.left-content {
+    flex: 1;
+    width: 650px;
+    font-family: 'Asap', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    margin: 10% 2.5% 5% 10%;    /*top right bottom left.*/
+}
+
+h1 {
+    font-family: 'baloo', sans-serif;
+    font-size: 50px;
+    color : white;
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(100%)}
+    100% { transform: translateX(0%)}
+}
+
+.right-content {
+    flex: 1;
+    overflow: auto;
+    height: 500px;
+    width: 650px;
+    margin: 5% 10% 5% 2.5%;
+    padding: 1%;
+    border-radius: 35px;
+    background-color: white;
+    box-shadow: 0 0 5px 5px #fff;   /* x, y, blur, spread */
+    /*resize: both;*/
+    /*opacity: 50%;*/
+    /*transition: opacity 2s, width 5s;*/
+    animation-name: slideIn;
+    animation-duration: 5s;
+}
+
+footer {
+    width: 100%;
+    background: white;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*box-shadow: 0 0 5px 5px #15c198;*/
+}
+
+@media screen and (max-width: 1000px) { /*(max-width: 1000px) and (min-width: 500px) */
+    .body-container {
+        justify-content: center;
+        flex-flow: column wrap;
+    }
+    .left-content, .right-content {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
