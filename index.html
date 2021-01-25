@@ -11,13 +11,16 @@
 <!--    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">-->
 </head>
 <body>
-    <header>
+    <header style="display:flex;align-items: center">
+        <div style="background-color: #15c198; border-radius: 100%;width:35px;height:35px;float:left;margin-left:25px;">
+
+        </div>
     </header>
 
     <div class="body-container fadeIn">
         <div class="left-content">
-            <h1>Hello, I'm <span style="color: blue">Matt</span></h1>
-            <h3>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h3>
+            <h1>Hello, my name is <span style="color: #15c198">Matt</span></h1>
+            <h3><em>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</em></h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet neque molestie nisl volutpat scelerisque.
                 Nulla vitae imperdiet neque. Fusce blandit sem congue mauris dictum, non volutpat nibh vulputate.
@@ -25,12 +28,40 @@
                 Donec quis ante ac dui posuere sodales non sit amet ipsum.
                 Aliquam ultrices tortor eget arcu tincidunt finibus.
             </p>
+                <ul style="text-align: center;list-style-type: none;margin: 0;padding: 0;">
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="html5.svg" width="32" height="32" alt="HTML5"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="css3.svg" width="32" height="32" alt="CSS3"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="javascript.svg" width="32" height="32" alt="Javascript"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="java.svg" width="32" height="32" alt="Java"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="python.svg" width="32" height="32" alt="Python"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="linux.svg" width="32" height="32" alt="Linux"></li>
+                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="android.svg" width="32" height="32" alt="Android"></li>
+                </ul>
         </div>
 
-        <div class="right-content slideIn">
-            <h3>
-                <span title="Basic example of hover text">Phasellus nec dui arcu. Sed lorem turpis.</span>
+        <div class="right-content">
+            <h3 align="center">
+                <span title="Basic example of hover text">My projects</span>
             </h3>
+
+            <style>
+                .griditem {
+                    border: 1px solid black;
+                    background: #15c198;
+                }
+            </style>
+            <div style="display: grid;grid-template-columns: auto auto auto auto;border:1px solid black;padding: 10px;grid-gap: 10px 10px;">
+                <div class="griditem">1</div>
+                <div class="griditem">2</div>
+                <div class="griditem">3</div>
+                <div class="griditem">4</div>
+                <div class="griditem">5</div>
+                <div class="griditem">6</div>
+                <div class="griditem">7</div>
+                <div class="griditem">8</div>
+            </div>
+
+
             <p>
                 Nullam egestas metus maximus magna rhoncus sodales.<br>
                 Maecenas porttitor tempor gravida. Integer dui ipsum, pellentesque at arcu non, posuere volutpat turpis.

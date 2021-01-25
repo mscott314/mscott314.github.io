@@ -52,14 +52,13 @@ header {
     justify-content: center;
     animation-duration: 5s;
     animation-name: fadeIn;
-    overflow: hidden;
 }
 
 .left-content {
     flex: 1;
     width: 650px;
-    font-family: 'Asap', sans-serif;
-    color: white;
+    font-family: 'baloo', sans-serif;
+    color: #fff;
     text-shadow: 1px 1px 1px #000;
     margin: 10% 2.5% 5% 10%;    /*top right bottom left.*/
 }
@@ -67,29 +66,23 @@ header {
 h1 {
     font-family: 'baloo', sans-serif;
     font-size: 50px;
-    color : white;
 }
 
-@keyframes slideIn {
-    0% { transform: translateX(100%)}
-    100% { transform: translateX(0%)}
-}
+/*@keyframes slideIn {*/
+/*    0% { transform: translateX(100%)}*/
+/*    100% { transform: translateX(0%)}*/
+/*}*/
 
 .right-content {
     flex: 1;
-    overflow: auto;
-    height: 500px;
+    /*overflow: auto;*/
+    min-height: 500px;
     width: 650px;
     margin: 5% 10% 5% 2.5%;
     padding: 1%;
     border-radius: 35px;
     background-color: white;
     box-shadow: 0 0 5px 5px #fff;   /* x, y, blur, spread */
-    /*resize: both;*/
-    /*opacity: 50%;*/
-    /*transition: opacity 2s, width 5s;*/
-    animation-name: slideIn;
-    animation-duration: 5s;
 }
 
 footer {
@@ -109,4 +102,9 @@ footer {
         margin: 0 auto;
         text-align: center;
     }
+}
+
+
+li {
+    display: inline;
 }
