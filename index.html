@@ -6,35 +6,70 @@
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css" id="theme">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet">
 <!--    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">-->
 </head>
 <body>
     <header style="display:flex;align-items: center">
-        <div onclick="theme_switch()" class="toggle" style="background-color: #15c198; border-radius: 100%;width:35px;height:35px;float:left;margin-left:25px;">
+        <div title="Double Click To Toggle Night Mode" style="background-color: #15c198; border-radius: 100%;width:35px;height:35px;float:left;margin-left:25px;">
         </div>
+
+
+<!--        <style type="text/css">-->
+<!--            input[name="test"] {-->
+<!--                appearance: none;-->
+<!--                height: 20px;-->
+<!--                width: 20px;-->
+<!--                background: red;-->
+<!--                border-radius: 50%;-->
+<!--                cursor: pointer;-->
+<!--            }-->
+<!--            .switch:hover {-->
+<!--                background: green;-->
+<!--            }-->
+<!--            .switch::after {-->
+<!--                background: purple;-->
+<!--            }-->
+<!--        </style>-->
+
+<!--        <form>-->
+<!--             name defines the group, value is whats sent, -->
+<!--            <button onclick="toggle('style.css')" style="box-shadow: 0 0 5px 5px black">light</button>-->
+<!--            <button onclick="toggle('dark.css')">dark</button>-->
+            <label>1<input title="test" type="radio" name="test" id="test1" onclick="toggle('style.css')"></label>
+            <label>2<input type="radio" name="test" id="test2" onclick="toggle('dark.css')"></label>
+            <label>3<input type="radio" name="test" id="test3" onclick="toggle('style.css')"></label>
+<!--        </form>-->
+
+
+
     </header>
 
     <div class="body-container fadeIn">
         <div class="left-content">
-            <h1>Hello, my name is <span style="color: #15c198">Matt</span></h1>
-            <h3><em>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</em></h3>
+            <h1>Hello, my name is <span style="color: #15c198">Matt</span> .</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet neque molestie nisl volutpat scelerisque.
-                Nulla vitae imperdiet neque. Fusce blandit sem congue mauris dictum, non volutpat nibh vulputate.
-                Morbi ut mauris libero. Praesent varius ipsum massa, eget sollicitudin nibh imperdiet ac.
-                Donec quis ante ac dui posuere sodales non sit amet ipsum.
-                Aliquam ultrices tortor eget arcu tincidunt finibus.
+                I am a computer science student who enjoys software engineering and web development.
+                My interests include learning to build full stack applications, and Linux system programming.
+                You can look at some of my projects and assignments I have worked on in my GitHub!
+                I have experience with multiple languages and database technologies and am always trying to expand my knowledge.
+<!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet neque molestie nisl volutpat scelerisque.-->
+<!--                Nulla vitae imperdiet neque. Fusce blandit sem congue mauris dictum, non volutpat nibh vulputate.-->
+<!--                Morbi ut mauris libero. Praesent varius ipsum massa, eget sollicitudin nibh imperdiet ac.-->
+<!--                Donec quis ante ac dui posuere sodales non sit amet ipsum.-->
+<!--                Aliquam ultrices tortor eget arcu tincidunt finibus.-->
             </p>
                 <ul style="text-align: center;list-style-type: none;margin: 0;padding: 0;">
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="html5.svg" width="32" height="32" alt="HTML5"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="css3.svg" width="32" height="32" alt="CSS3"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="javascript.svg" width="32" height="32" alt="Javascript"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="java.svg" width="32" height="32" alt="Java"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="python.svg" width="32" height="32" alt="Python"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="linux.svg" width="32" height="32" alt="Linux"></li>
-                    <li><img style="filter: drop-shadow(1px 1px 1px #000)" src="android.svg" width="32" height="32" alt="Android"></li>
+                    <li><img src="images/html5.svg" width="32" height="32" alt="HTML5" title="HTML5"></li>
+                    <li><img src="images/css3.svg" width="32" height="32" alt="CSS3" title="CSS3"></li>
+                    <li><img src="images/javascript.svg" width="32" height="32" alt="Javascript" title="Javascript"></li>
+                    <li><img src="images/java.svg" width="32" height="32" alt="Java" title="Java"></li>
+                    <li><img src="images/c.svg" width="32" height="32" alt="Java" title="C"></li>
+                    <li><img src="images/python.svg" width="32" height="32" alt="Python" title="Python"></li>
+                    <li><img src="images/linux.svg" width="32" height="32" alt="Linux" title="Linux"></li>
+                    <li><img src="android.svg" width="32" height="32" alt="Android" title="Android"></li>
+                    <li><img src="images/mysql.svg" width="32" height="32" alt="Java" title="MySQL"></li>
+                    <li><img src="images/mongo.svg" width="32" height="32" alt="Java" title="MongoDB"></li>
                 </ul>
         </div>
 
@@ -59,7 +94,6 @@
                 <div class="griditem">7</div>
                 <div class="griditem">8</div>
             </div>
-
 
             <p>
                 Nullam egestas metus maximus magna rhoncus sodales.<br>
